@@ -39,7 +39,7 @@ class Encoder:
 
   def encodeplay(self, somestring):
     soundlist = self.string2sound(somestring)
-    self.stream.write(soundlist.astype(np.dtype('int16')))
+    self.stream.write(soundlist.astype(np.dtype('int16')).tobytes())
 
   def getbit(self, freq):
 
